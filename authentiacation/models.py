@@ -24,8 +24,8 @@ class TimestampedModel(models.Model):
 class User(AbstractBaseUser, PermissionsMixin, TimestampedModel):
     
     username = models.CharField(max_length=100, unique=True)
-    # is_active = BooleanField(default=True)
-    # is_staff = BooleanField(default=False)
+    is_active = BooleanField(default=True)
+    is_staff = BooleanField(default=False)
     
     USERNAME_FIELD = 'username'
     

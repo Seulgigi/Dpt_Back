@@ -89,6 +89,21 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
 # 쿠키가 cross-site HTTP 요청에 포함
+
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
+
+CORS_ALLOW_HEADERS = (
+    'accept',
+    
+)
+
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
