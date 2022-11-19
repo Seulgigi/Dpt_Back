@@ -71,12 +71,15 @@ class GuestCreate(generics.ListCreateAPIView):
 #         qs = qs.filter(user=self.request.user).order_by('score')
 #         return qs
 
+
 class CookieList(generics.ListCreateAPIView):
+
     serializer_class = CookieListSerializer
     permission_classes = []
     queryset = Guest.objects.all().order_by('-score')
     
     def get_queryset(self):
-        qs = super().get_queryset()
-        qs = qs.filter(user=self.request.user)
-        return qs
+         qs = Guest().get_queryset()
+         qs = qs.filter(user=self.request.user)
+         return qs
+

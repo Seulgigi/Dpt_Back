@@ -103,7 +103,7 @@ class Guest(models.Model):
 
 # class CookieList(models.Model):
 #     user = models.ForeignKey(User, on_delete=models.CASCADE)
-#     id = models.AutoField(primary_key=True)
+
 #     nickname = models.CharField(max_length=30)
 #     score = models.IntegerField(default=0, null=True, blank=True)
 
