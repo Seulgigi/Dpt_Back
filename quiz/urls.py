@@ -9,5 +9,5 @@ urlpatterns = [
     # path('make/answer/<str:user>/', AnswerCreate.as_view()),
     path('make/answer/<str:user>/', NewAnswerCreate.as_view()),
     path('<str:user>/', GuestCreate.as_view()), 
-    # path('cookie/list/<str:name>', CookieList.as_view()),
+    path('cookie/list/<str:name>', CookieList.as_view()),
 ]

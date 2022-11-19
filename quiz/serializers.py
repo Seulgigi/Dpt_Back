@@ -78,7 +78,7 @@ class GuestSerializer(serializers.ModelSerializer):
         data.save()
         return data
 
-# class CookieListSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Guest
-#         fields = ('nickname','score')
+class CookieListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Guest
+        fields = ('nickname','score')
