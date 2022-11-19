@@ -9,6 +9,7 @@ from .serializers import RegistrationSerializer, LoginSerializer
 
 class RegistrationAPIView(APIView):
     permission_classes = (AllowAny,)
+    renderer_classes = (UserJSONRenderer,)
     serializer_class = RegistrationSerializer
 
     def post(self, request):
